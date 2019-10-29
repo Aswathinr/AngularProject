@@ -1,0 +1,44 @@
+<h1 style="text-align:center" class="demo">
+        Reservation Form
+      </h1>
+      <div class="reserve">
+        <h2 class="reservation-header">Form</h2>
+ <form [formGroup]="reservationForm" class="reservation-container" (ngSubmit)="onSubmit()">
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls.firstname.errors }">
+                <input type="firstname" placeholder="FirstName" formControlName="firstname">
+              </p>
+              <div *ngIf="isSubmitted && formControls.firstname.errors" class="help-block">
+                <div *ngIf="formControls.firstname.errors.required">FirstName is required</div>
+              </div>
+    
+     <!-- select input in angular forms -->
+  <label for="memory">Choose your city</label>
+  <select formControlName="memory" id="memory" >
+      <option value="" disabled>Select One</option>
+    <option value="16">Delhi</option>
+    <option value="32">Mizoram</option>
+    <option value="64">Florida</option>
+    <option value="128">Michigan</option>
+  </select><br><br>
+  <!-- Distance input in angular forms -->
+  <label for="date">Choose Date </label>
+  <input formControlName="date" id="date" type="date" /><br><br> 
+
+  <!-- number input in angular forms -->
+  <label for="age">No. of persons </label>
+  <input formControlName="person" id="person" type="number" /><br><br>
+
+  <span class="label">Status</span><br>
+  <label>
+    <input formControlName="region" type="radio" name="region" value="i agree" />
+    I Agree
+  </label><br>
+  <label>
+    <input formControlName="region" type="radio" name="region" value="i disagree" />
+    I Disagree
+  </label><br>
+
+ <!-- Submit Button -->
+ <button type="submit" class="btn btn-danger btn-lg btn-block">Submit</button>
+
+ 
