@@ -13,6 +13,7 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { GitcompComponent } from './gitcomp/gitcomp.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
     CreateEmployeeComponent,
     EmployeeDetailsComponent,
     UpdateEmployeeComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    GitcompComponent
   ],
   imports: [
     BrowserModule,
